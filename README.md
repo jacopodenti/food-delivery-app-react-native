@@ -18,10 +18,6 @@ L’obiettivo del progetto è mostrare un’architettura pulita, scalabile e ori
 - Supporto per font custom e UI responsive
 
 ---
-
-## 🧱 Architettura
-
-Il progetto è strutturato secondo principi modulari e domain-driven:
 ## 🧱 Architettura
 
 La struttura del progetto è organizzata in moduli indipendenti e facilmente estendibili:
