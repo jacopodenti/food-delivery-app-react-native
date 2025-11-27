@@ -22,30 +22,36 @@ L’obiettivo del progetto è mostrare un’architettura pulita, scalabile e ori
 ## 🧱 Architettura
 
 Il progetto è strutturato secondo principi modulari e domain-driven:
+## 🧱 Architettura
 
-Mangia_e_Basta_2.0/
-│
-├── app/ # Entry point e root navigation
-├── assets/
-│ └── fonts/ # Font custom importati in Expo
-│
-├── components/ # UI components riutilizzabili (Card, Button, Header...)
-│
-├── constants/ # Costanti di progetto: colori, dimensioni, API endpoints
-│
-├── hooks/ # Custom hooks (useCart, useRestaurants, ecc.)
-│
-├── lib/ # Moduli standalone (formatter, helpers, storage utils)
-│
-├── scripts/ # Script di build / utilities / mock seed
-│
-├── utils/ # Funzioni pure e helper (formatter, validators)
-│
-├── app.json # Configurazione Expo
-├── package.json
-├── tsconfig.json
-└── expo-env.d.ts
+La struttura del progetto è organizzata in moduli indipendenti e facilmente estendibili:
 
+### `app/`
+Entry point dell’applicazione e definizione della navigazione principale (stack/tab).
+
+### `assets/`
+Font e risorse statiche utilizzate nell’interfaccia.
+
+### `components/`
+Componenti UI riutilizzabili (card, list item, header, pulsanti).  
+Riduce duplicazione e semplifica la manutenzione.
+
+### `constants/`
+Definizioni centralizzate: colori, spaziature, configurazioni globali, endpoint mock.
+
+### `hooks/`
+Custom hooks che incapsulano logiche riutilizzabili  
+(es. gestione carrello, fetch dei ristoranti).
+
+### `lib/`
+Funzioni e moduli indipendenti dalla UI  
+(formatter, funzioni di storage, helpers).
+
+### `scripts/`
+Script di supporto (mock data, utility di sviluppo).
+
+### `utils/`
+Funzioni pure e helper generali non legate a un dominio specifico.
 Questa struttura permette di mantenere separati:
 
 - **UI**  
